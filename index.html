@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <main>
+    <main data-route="landing">
       <form id="searchForm">
         <input type="text" placeholder="search for a topic" />
         <input type="submit" />
@@ -18,6 +18,11 @@
         <ul id="movieContainer"></ul>
       </section>
     </main>
+
+    <main data-route="detail">
+      <section id="detailContainer"></section>
+    </main>
+    <script src="./scripts/routing/routie.js"></script>
     <script src="./scripts/app.js" type="module"></script>
   </body>
 </html>

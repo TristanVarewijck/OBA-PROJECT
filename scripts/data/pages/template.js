@@ -1,10 +1,10 @@
 const movieContainer = document.getElementById("movieContainer");
 
 const insertContent = (resultDetails) => {
+  let results = resultDetails;
   resultDetails.forEach((detail) => {
     const movieTemplate = `
         <a href=#movie/${detail.id}>
-        <div style="background-image: url(${detail.coverimages[0]})
         <div>
           <h2>${detail.title}</h2>
           <small>${detail.year}</small>
@@ -17,6 +17,8 @@ const insertContent = (resultDetails) => {
     movieBanner.innerHTML = movieTemplate;
     movieContainer.appendChild(movieBanner);
   });
+
+  return results;
 };
 
 export { insertContent };
