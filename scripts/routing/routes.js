@@ -2,13 +2,11 @@ import { insertDetailInformation } from "../data/pages/detail.js";
 
 const mains = document.querySelectorAll("main");
 
-const routing = (movies) => {
+const routing = (results) => {
   routie({
     "movie/:id": (id) => {
-      console.log(movies);
+      insertDetailInformation(results, id);
       updateUI("detail");
-      insertDetailInformation(id, movies);
-      console.log("detailpage");
     },
     " ": () => {
       updateUI("landing");

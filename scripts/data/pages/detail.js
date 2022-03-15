@@ -1,18 +1,20 @@
 const detailContainer = document.getElementById("detailContainer");
 
-const insertDetailInformation = (id, movies) => {
-  console.log("KAAS");
-  console.log(id);
-  console.log(movies);
+const insertDetailInformation = (results, id) => {
   while (detailContainer.firstChild) {
     detailContainer.removeChild(detailContainer.firstChild);
   }
+  let movie = results.filter((result) => result.id === id);
 
-  let movieInfo = movies.filter((movie) =>
-    `${movie.id}` === id ? console.log("good") : console.log("bad")
-  );
+  movie.forEach((item) => {
+    const detail = `
+    <h1>${item.title}</h1>
+    `;
 
-  console.log(movie);
+    const detailSection = document.createElement("section");
+    detailSection.innerHTML = detail;
+    detailContainer.appendChild(detailSection);
+  });
 };
 
 export { insertDetailInformation };
