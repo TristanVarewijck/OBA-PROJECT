@@ -1,3 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+/* font-family: 'Open Sans', sans-serif; */
+/*hide and show detail page */
 .disabled {
     display: none;
+}
+
+html {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    background: var(--black);
+    color: var(--white);
+    padding: 0;
+    margin: 0;
+}
+
+/* const */
+:root {
+    --red: #ff0000;
+    --black: #000000;
+    --white: #ffffff;
+    --fontStyle: "Open Sans", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: var(--white);
+    cursor: pointer;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+button {
+    border: none;
+    background: none;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    height: 64px;
+    align-items: center;
+    padding: 0 1em 0 1em;
+}
+
+h1 {
+    font-size: 2.2em;
+    letter-spacing: 0.5%;
+    line-height: 37px;
+    font-weight: 600;
+    text-align: center;
+}
+
+header {
+    height: 305px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/assets/images/background.jpg");
+    background-size: cover;
+    border-bottom: 3px #4a4a4a solid;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form input {
+    font-family: var(--fontStyle);
+    background: none;
+    border: var(--white) 2px solid;
+    color: var(--white);
+    border-radius: 4px;
+    width: 300px;
+    height: 36px;
+    padding-left: 1em;
+    margin-bottom: 1em;
+    font-size: 1em;
+    outline: none;
+}
+
+form input:active:focus {
+    outline: none;
+}
+
+form input:first-of-type::placeholder {
+    color: var(--white);
+    font-weight: 500;
+    opacity: 87%;
+}
+
+form button {
+    width: 105px;
+    height: 36px;
+    background: var(--red);
+    border-radius: 4px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-size: 1em;
+    color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1em 0 1em;
 }

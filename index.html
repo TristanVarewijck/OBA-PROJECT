@@ -8,11 +8,30 @@
   </head>
   <body>
     <main data-route="landing">
-      <form id="searchForm">
-        <input type="text" placeholder="search for a topic" />
-        <input type="submit" />
-      </form>
-      <h1>Hello World!</h1>
+      <header>
+        <nav>
+          <ul>
+            <li>
+              <a href="#"><img src="./assets/icons/logo.png" alt="logo" /></a>
+            </li>
+            <li>
+              <button type="button">
+                <img src="./assets/icons/burger.svg" alt="hamburger-icon" />
+              </button>
+            </li>
+          </ul>
+        </nav>
+        <h1>Movies for Entrepreneurs.</h1>
+        <form id="searchForm">
+          <input type="text" placeholder="Enter a Movie name" />
+          <button type="submit">
+            <span>Zoek</span>
+            <span
+              ><img src="./assets/icons/search.svg" alt="searchIcon"
+            /></span>
+          </button>
+        </form>
+      </header>
 
       <section>
         <ul id="movieContainer"></ul>
