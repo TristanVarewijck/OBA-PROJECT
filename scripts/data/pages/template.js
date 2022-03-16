@@ -8,7 +8,8 @@ const insertContent = (resultDetails) => {
         <div>
           <h2>${detail.title}</h2>
           <small>${detail.year}</small>
-        <div>
+        </div>
+        <img src=${detail.img}>
         <p>${detail.summary}</p>
         </a>
         `;

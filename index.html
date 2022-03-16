@@ -21,7 +21,10 @@
             </li>
           </ul>
         </nav>
-        <h1>Movies for Entrepreneurs.</h1>
+        <h1>
+          Movies for <br />
+          Entrepreneurs.
+        </h1>
         <form id="searchForm">
           <input type="text" placeholder="Enter a Movie name" />
           <button type="submit">
@@ -31,6 +34,13 @@
             /></span>
           </button>
         </form>
+
+        <section>
+          <p>
+            Search for topics you want to know more about and that could help
+            you with your business
+          </p>
+        </section>
       </header>
 
       <section>
@@ -41,6 +51,19 @@
     <main data-route="detail">
       <section id="detailContainer"></section>
     </main>
+
+    <!-- loading -->
+    <section>
+      <img src="./assets/icons/loader.svg" alt="loading-icon" />
+      <p>Searching for movies...</p>
+    </section>
+
+    <!-- empty -->
+    <section>
+      <i class="fa-solid fa-question"></i>
+      <p>No results found...</p>
+    </section>
+
     <script src="./scripts/routing/routie.js"></script>
     <script src="./scripts/app.js" type="module"></script>
   </body>
