@@ -1,6 +1,6 @@
 const empty = document.querySelector("body > section:nth-of-type(2)");
 
-function displayEmptyState(value) {
+function displayEmptyState() {
   empty.classList.add("display");
 }
 

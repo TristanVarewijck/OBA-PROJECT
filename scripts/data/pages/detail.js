@@ -8,10 +8,21 @@ const insertDetailInformation = (results, id) => {
 
   movie.forEach((item) => {
     const detail = `
+    <div>
+    <div>
     <h1>${item.title}</h1>
+    
+    <img src=${item.img ? item.img : "../assets/images/default.png"}>
+    </div>
 
-    <figure><img src=${item.img}><figure>
-    <figcaption><figcaption
+    <div>
+    <p><span>Year:</span> ${item.year}</p>
+    <p><span>Authors:</span> ${item.authors}</p>
+    <p><span>Genres:</span> ${item.genres}</p>
+    </div>
+    </div>
+<div/>
+    
     `;
 
     const detailSection = document.createElement("section");
