@@ -1,4 +1,4 @@
-import { myData } from "./myData.js";
+import { cleanData } from "./cleanData.js";
 import { insertContent } from "./pages/template.js";
 import { routing } from "../routing/routes.js";
 // import { insertDetailInformation } from "./pages/detail.js";
@@ -23,7 +23,7 @@ const fetchData = async (query) => {
       hideLoading();
       return res.json();
     })
-    .then(myData)
+    .then(cleanData)
     .then(insertContent)
     .then(routing)
     .catch((err) => {

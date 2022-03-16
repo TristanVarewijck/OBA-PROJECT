@@ -1,53 +1,41 @@
-const cleanedDataResults = (myData) => {
-  let dataToClean = myData;
-  const cleanedData = dataToClean.map((item) => {
-    const title = addSpaces(item.title);
+import { displayEmptyState, hideEmptyState } from "../states/empty.js";
 
-    console.log(title);
+const cleanData = (data) => {
+  let results = data.results;
+  const cleanedData = results.map((result) => {
+    const myKeys = [
+      "summaries",
+      "year",
+      "titles",
+      "authors",
+      "id",
+      "coverimages",
+      "genres",
+    ];
 
-    return title;
+    myKeys.forEach((key) => {
+      key in result ? result[key] : (result[key] = ["-"]);
+    });
+
+    return {
+      title: result.titles[0],
+      summary: result.summaries[0],
+      year: result.year,
+      img: result.coverimages[1],
+      id: result.id,
+      authors: addSpaces(result.authors.toString()),
+      genres: addSpaces(result.genres.toString()),
+    };
   });
 
+  cleanedData.length <= 0 ? displayEmptyState() : hideEmptyState();
   return cleanedData;
 };
 
-export { cleanedDataResults };
-
-function addSpaces(title) {
-  const cleanedTitle = title.replace(" ", "kaas");
-
-  //   return cleanDataObj.map((obj) => {
-  //     obj.value = (Math.round(obj.value * 100) / 100).toString();
-  return cleanedTitle;
-  //   });
+// CLEANING
+function addSpaces(authors) {
+  const authorsWithCommas = authors.replaceAll(",", ", ");
+  return authorsWithCommas;
 }
 
-// let cryptoData = res.data.prices;
-//       // convert array to th object
-//       let cleanDataObj = new Array();
-
-//       cleanDataObj = cryptoData.map((item) => {
-//         return {
-//           date: item[0],
-//           value: item[1],
-//         };
-//       });
-//       // 1 cleandecimals
-//       cleanDataObj = setDecimals(cleanDataObj);
-//       // 2 convert to dates
-//       cleanDataObj = setDates(cleanDataObj);
-
-//       // logger
-//       console.log(cleanDataObj);
-//     })
-//     .catch(function (err) {
-//       console.log(err);
-//     });
-// }
-
-// function setDecimals(cleanDataObj) {
-//   return cleanDataObj.map((obj) => {
-//     obj.value = (Math.round(obj.value * 100) / 100).toString();
-//     return obj;
-//   });
-// }
+export { cleanData };
