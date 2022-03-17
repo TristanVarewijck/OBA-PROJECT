@@ -1,10 +1,10 @@
-# Project WAFS :gear:
+# Project OBA :gear:
 
 _Shields that represent my project - They change over time._
 
 ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/TristanVarewijck/TechDefined) ![Isseus](https://img.shields.io/github/issues/TristanVarewijck/TechDefined) ![Language](https://img.shields.io/github/languages/top/TristanVarewijck/TechDefined) ![Count](https://img.shields.io/github/languages/count/TristanVarewijck/TechDefined?color=#a55eea) ![NPM](https://img.shields.io/npm/v/npm) ![MIT-License](https://img.shields.io/apm/l/vim-mode)
 
-## TechDefined Concept Design :pencil2:
+## Project OBA Concept Design :pencil2:
 
 ![TechDefined-concept-design](https://github.com/TristanVarewijck/OBA-PROJECT/blob/main/assets/images/concept-display.png)
 
@@ -47,26 +47,20 @@ For the project OBA, I have to make a singelpage web-application with the focus 
 
 ## API
 
-<img src="https://github.com/TristanVarewijck/TechDefined/blob/main/assets/images/newApi-LOGO.jpeg" alt="newsapi-logo" width="200px"/>
+<img src="https://github.com/TristanVarewijck/OBA-PROJECT/blob/main/assets/images/logo.png" alt="newsapi-logo" width="200px"/>
 
-For this project i am using the NewsAPI from - [NewsAPI](https://newsapi.org/) <br>
+For this project i am using the api from the [OBA](https://www.oba.nl/) <br>
 To search on the app im using the endpoints below with the following params:
 
 This one is so i can search articles for specific topics:
-[https://newsapi.org/v2/everything](https://newsapi.org/v2/everything)
+[https://zoeken.oba.nl/api/v1/}](https://zoeken.oba.nl/api/v1/)
 
-|  Key  |    q    |   sortBy    | language | pageSize |  apiKey  |
-| :---: | :-----: | :---------: | :------: | :------: | :------: |
-| value | {input} | publishedAt |    en    |   100    | {apiKey} |
+|  Key  |    q     | authorization | refine |    facet    | output |
+| :---: | :------: | :-----------: | :----: | :---------: | :----: |
+| value | {queary} |    {auth}     |  true  | type(movie) |  json  |
 
-this one is so i can see the latest headlines in a specific category:
-[https://newsapi.org/v2/headlines](https://newsapi.org/v2/headlines)
-
-|  Key  | country |  category  | pageSize |  apiKey  |
-| :---: | :-----: | :--------: | :------: | :------: |
-| value |   us    | technology |   100    | {apiKey} |
-
-:rotating_light: : As explained earlier the API is not usable outside your localhost, for this project i used the **FREE version** of this API.
+https://zoeken.oba.nl/api/v1/search/?q=
+${endpoint}${query}&authorization=\${auth}&refine=true&facet=type(movie)&output=json}
 
 ---
 
