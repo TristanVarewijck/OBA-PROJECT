@@ -178,7 +178,7 @@ body section:first-of-type ul li {
   padding-bottom: 0.6em;
   margin-bottom: 1.2em;
   border-bottom: 1.2px var(--white) solid;
-  display: none;
+  /* display: none; */
 }
 
 body section:first-of-type ul li div:first-of-type {

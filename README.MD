@@ -52,15 +52,9 @@ For the project OBA, I have to make a singelpage web-application with the focus 
 For this project i am using the api from the [OBA](https://www.oba.nl/) <br>
 To search on the app im using the endpoints below with the following params:
 
-This one is so i can search articles for specific topics:
-[https://zoeken.oba.nl/api/v1/}](https://zoeken.oba.nl/api/v1/)
-
 |  Key  |    q     | authorization | refine |    facet    | output |
 | :---: | :------: | :-----------: | :----: | :---------: | :----: |
 | value | {queary} |    {auth}     |  true  | type(movie) |  json  |
-
-https://zoeken.oba.nl/api/v1/search/?q=
-${endpoint}${query}&authorization=\${auth}&refine=true&facet=type(movie)&output=json}
 
 ---
 
