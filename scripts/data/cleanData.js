@@ -2,6 +2,7 @@ import { displayEmptyState, hideEmptyState } from "../states/empty.js";
 
 const cleanData = (data) => {
   let results = data.results;
+  console.log(results);
   const cleanedData = results.map((result) => {
     const myKeys = [
       "summaries",
@@ -11,6 +12,7 @@ const cleanData = (data) => {
       "id",
       "coverimages",
       "genres",
+      "detailLink",
     ];
 
     myKeys.forEach((key) => {
@@ -25,17 +27,17 @@ const cleanData = (data) => {
       id: result.id,
       authors: addSpaces(result.authors.toString()),
       genres: addSpaces(result.genres.toString()),
+      link: result.detailLink,
     };
   });
-
   cleanedData.length <= 0 ? displayEmptyState() : hideEmptyState();
   return cleanedData;
 };
 
 // CLEANING
 function addSpaces(authors) {
-  const authorsWithCommas = authors.replaceAll(",", ", ");
-  return authorsWithCommas;
+  const fixedSpacing = authors.replaceAll(",", ", ");
+  return fixedSpacing;
 }
 
 export { cleanData };

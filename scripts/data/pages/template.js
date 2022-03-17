@@ -1,3 +1,4 @@
+import { movieObserver } from "../../partials/movieObserver.js";
 const movieContainer = document.getElementById("movieContainer");
 
 const insertContent = (cleanedData) => {
@@ -19,6 +20,11 @@ const insertContent = (cleanedData) => {
     movieContainer.appendChild(movieBanner);
   });
 
+  const moviesToObserve = document.querySelectorAll(
+    "main:first-of-type > section ul li"
+  );
+
+  movieObserver(moviesToObserve);
   return results;
 };
 
