@@ -36,6 +36,11 @@ a {
   cursor: pointer;
 }
 
+small {
+  display: block;
+  font-weight: 600;
+}
+
 ul {
   list-style-type: none;
   padding: 0;
@@ -58,7 +63,7 @@ nav ul {
 h1 {
   font-size: 2.2em;
   letter-spacing: 0.5%;
-  line-height: 37px;
+  line-height: 40px;
   font-weight: 600;
   text-align: center;
 }
@@ -127,7 +132,16 @@ header section {
   font-size: 12px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
+}
+
+header section button {
+  color: var(--white);
+  background: var(--black);
+  padding: 0.5em 0.5em 0.5em 0.5em;
+  width: 60px;
+  border-radius: 2px;
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.3);
 }
 
 header section p {
@@ -146,12 +160,14 @@ body section:first-of-type h2 {
 body section:first-of-type p {
   font-size: 0.8em;
   opacity: 87%;
+  margin-top: 0.2em;
 }
 
 body section:first-of-type img {
   border-radius: 2px;
-  width: 100px;
+  width: 180px;
   height: auto;
+  margin-bottom: 1em;
 }
 
 body section:first-of-type ul {
@@ -162,6 +178,7 @@ body section:first-of-type ul li {
   padding-bottom: 0.6em;
   margin-bottom: 1.2em;
   border-bottom: 1.2px var(--white) solid;
+  display: none;
 }
 
 body section:first-of-type ul li div:first-of-type {
@@ -264,10 +281,9 @@ main:nth-of-type(2) nav a img {
 }
 
 main:nth-of-type(2) h1 {
-  margin: -10;
-  font-size: 1.2em;
+  font-size: 1.4em;
   line-height: 30px;
-  margin-bottom: 1.5;
+  margin-bottom: 1.5em;
 }
 
 main:nth-of-type(2) section {
@@ -292,13 +308,18 @@ main:nth-of-type(2) section div > div span {
 
 main:nth-of-type(2) section img {
   width: 250px;
+  border-radius: 9px;
+}
+
+main:nth-of-type(2) section p {
+  margin-top: 0.6em;
 }
 
 main:nth-of-type(2) section a {
   position: absolute;
   background: var(--red);
   color: var(--white);
-  border-radius: 2px;
+  border-radius: 6px;
   font-weight: 600;
   letter-spacing: 0.5px;
   font-size: 1.2em;
@@ -308,6 +329,7 @@ main:nth-of-type(2) section a {
   left: calc(50% - 100px);
   right: 0;
   bottom: 10%;
+  box-shadow: 0px 4px 60px rgba(255, 0, 0, 0.235);
 }
 
 /* CARD SCROLL ANIMATION */
@@ -317,4 +339,8 @@ main:nth-of-type(2) section a {
 }
 .invisible {
   opacity: 0;
+}
+
+.show {
+  display: block;
 }

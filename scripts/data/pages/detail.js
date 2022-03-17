@@ -20,11 +20,9 @@ const insertDetailInformation = (results, id) => {
     <p><span>Authors:</span> ${item.authors}</p>
     <p><span>Genres:</span> ${item.genres}</p>
     <p><span>Description:</span> ${item.summary}</p>
-    </div>
-
     <a href=${item.link}>Reserve this item</a>
     </div>
-    
+    </div>
 </div>
     
     `;

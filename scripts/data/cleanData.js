@@ -31,6 +31,7 @@ const cleanData = (data) => {
     };
   });
   cleanedData.length <= 0 ? displayEmptyState() : hideEmptyState();
+
   return cleanedData;
 };
 

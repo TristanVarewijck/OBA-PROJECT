@@ -6,24 +6,18 @@ _Shields that represent my project - They change over time._
 
 ## TechDefined Concept Design :pencil2:
 
-![TechDefined-concept-design](https://github.com/TristanVarewijck/TechDefined/blob/main/assets/images/concept-display.png)
+![TechDefined-concept-design](https://github.com/TristanVarewijck/OBA-PROJECT/blob/main/assets/images/concept-display.png)
 
 ## Live Demo :clapper:
 
 See the latest updated demo here:
-[Link to DEMO](https://tristanvarewijck.github.io/TechDefined/)
-
-:rotating_light: **WARNING** :rotating_light: <br>
-API does not work in the live-demo to see the full experience of this app, make sure to clone it locally and run in on your localhost.
-
-To get acces on the full API make sure to see their [pricing scheme](https://newsapi.org/pricing).
+[Link to DEMO](https://tristanvarewijck.github.io/TechDefined/).
 
 ---
 
 ## Description :label:
 
-For the project WAFS (Web Application from Scratch) I'm going to make a "single page" tech-news app.
-On the app you can see the most relevant articles in the tech world, in addition, you have suggested search results and you can search for articles on a specific topic. For the project i am using the NewsAPI.
+For the project OBA, I have to make a singelpage web-application with the focus of creating new concepts what can be done with the current API. For the project i decided to make a netflix inspired application. The application is about renting and searching movies from the OBA inside a app.
 
 ---
 
@@ -43,17 +37,11 @@ On the app you can see the most relevant articles in the tech world, in addition
 :chains: Features for this app are mainly still under construction.
 
 1. **Search** <br>
-   Search for the Topics you are interested from over the whole World.
-2. **Endless scroll** <br>
-   Scroll trough endless articles related to your topic or scroll to the headlines of this current day!
-3. **Sharing** <br>
-   Share articles on Twitter.
-4. **Text to Speech** <br>
-   With the Text to Speech Feature you can have it read to you instead of reading it yourself.
-5. **Suggested Topics** <br>
-   With the filter-buttons your can search on topics that are suggested by the App.
-6. **Read more** <br>
-   Clicking on the banner of the article will bring your to the detail page where can read more about it.
+   Search for the Movies you are interested in.
+2. **Detail**
+   See detailed information about a Movie
+3. **Filter**
+   Filter between movies formats.
 
 ---
 
@@ -84,15 +72,11 @@ this one is so i can see the latest headlines in a specific category:
 
 ## ToDoList
 
-In addition to the features that are now available, there are also additional features and tweaks that can make the app better. Do you have ideas let them know in a [PR](https://github.com/TristanVarewijck/TechDefined/pulls) :white_check_mark:
+In addition to the features that are now available, there are also additional features and tweaks that can make the app better. Do you have ideas let them know in a [PR](https://github.com/TristanVarewijck/OBA-PROJECT/pulls) :white_check_mark:
 
-- [x] Detail pages
-- [ ] Locomotive scroll testing
-- [ ] Filter buttons
-- [x] JS refactoring
 - [ ] Keep-scroll position
-- [ ] No refresh on page switch
 - [ ] Reponsiveness
+- [ ] More filters
 
 ---
 
@@ -103,22 +87,18 @@ For using this app yourself you need to follow the following steps:
 ### 1. Clone Repo locally
 
 ```
-git clone https://github.com/TristanVarewijck/TechDefined.git
+git clone https://github.com/TristanVarewijck/OBA-PROJECT.git
 ```
 
 ### 2. Connect your API key
 
-If you want to connect with the API you have to fill in your own personal {apiKey} wich you can get here: <br>
-[Get NewsAPI apiKey](https://newsapi.org/).
+If you want to connect with the API you have to fill in your own personal {apiKey}.
 
 ```
-https://newsapi.org/v2/everything?q=${input.value}&sortBy=publishedAt&language=en&pageSize=100&apiKey=${apiKey}
-https://newsapi.org/v2/top-headlines?country=us&category=technology&pageSize=100&apiKey=${apiKey}
+${endpoint}${query}&authorization=${auth}&refine=true&facet=type(movie)&output=json}
 ```
 
 ### 3. Run on Localhost
-
-Because i am using the free version of this API your need to run it on your localhost to test it. If you want to move further with this app make sure to check out the [pricing scheme](https://newsapi.org/pricing) of NewsAPI.
 
 For easily running this project on your localhost you can use a VSCODE extension named: <br>
 [live-server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
